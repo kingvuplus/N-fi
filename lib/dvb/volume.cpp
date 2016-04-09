@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 #include <linux/dvb/version.h>
-+#if DVB_API_VERSION < 3
+#if DVB_API_VERSION < 3
 #define VIDEO_DEV "/dev/dvb/card0/video0"
 #define AUDIO_DEV "/dev/dvb/card0/audio0"
 #include <ost/audio.h>
