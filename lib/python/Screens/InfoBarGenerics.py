@@ -805,6 +805,15 @@ class InfoBarShowHide(InfoBarScreenSaver):
 			self.show()
 #end
 
+        def toggleShowLong(self):
+		try:
+			if self.LongButtonPressed:
+				if isinstance(self, InfoBarEPG):
+					if config.plisettings.InfoBarEpg_mode.value == "1":
+						self.openInfoBarEPG()
+		except Exception, e:
+			print "[InfoBarGenerics] 'toggleShowLong' failed:", e
+
 	def lockShow(self):
 		try:
 			self.__locked += 1
