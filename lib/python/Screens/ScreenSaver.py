@@ -47,4 +47,4 @@ class Screensaver(Screen):
 		self.posx = random.randint(1,self.maxx)
 		self.posy = random.randint(1,self.maxy)
 		self["picture"].instance.move(ePoint(self.posx, self.posy))
-		self.moveLogoTimer.startLongTimer(9)
+		self.moveLogoTimer.startLongTimer(5)
